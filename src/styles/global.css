@@ -1,0 +1,207 @@
+@import url( 'https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap');
+
+:root {
+    --primaryBlue: #023e8a;
+}
+
+.App,
+body {
+    overflow-x: hidden !important;
+    font-family: 'Work Sans', sans-serif !important;
+    padding:0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+li{
+    list-style: none;
+}
+
+.sectionHeight--mid {
+    min-height: 80vh;
+}
+
+.fullHeight {
+    min-height: 100vh;
+}
+
+.sectionHeight {
+    min-height: 50vh;
+}
+
+.sectionHeight--short {
+    min-height: 40vh;
+}
+
+.sectionText {
+    font-size: 18px;
+}
+
+.sectionText--mid {
+    font-size: 14px;
+}
+
+.sectionText--small {
+    font-size: 12px;
+}
+
+.sectionHead--mid {
+    font-size: 25px;
+}
+
+.textIsBold {
+    font-weight: bold !important;
+}
+
+.textIsGray{
+    color: #202020B2;
+}
+
+.textIsBlue{
+    color: #023E8A;
+}
+
+.vAlign {
+    text-align: center;
+}
+
+.lAlign {
+    text-align: left;
+}
+
+.rAlign {
+    text-align: right;
+}
+
+.isClickable{
+    cursor: pointer;
+}
+
+.spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alignOnly {
+    display: flex;
+    align-items: center;
+}
+
+.mAuto{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.navLink{
+    width: fit-content;
+}
+
+.defaultBtn {
+    background-color: var(--primaryBlue);
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 3px 2px 15px 2px lightgrey;
+    padding: 0.8rem;
+    position: relative;
+    border: none;
+    outline: none;
+    transition: all 0.4s ease;
+}
+.defaultBtn:hover {
+    color: #fff;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.noPad {
+    padding: none !important;
+}
+
+.linkEffect {
+    position: relative;
+    font-size: 13px;
+    color: var(--primaryPurple);
+}
+
+.linkEffect::before {
+    content: '';
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    left: -10px;
+    cursor: pointer;
+    border-radius: 30px;
+    background-color: #9655DE59;
+    transition: all 0.3s ease;
+}
+.linkEffect:hover::before {
+    width: 100%;
+}
+
+.transparentBtn {
+    border: 1px solid #2020204D;
+    padding: .7rem;
+    border-radius: 10px;
+    outline: none;
+     background: transparent;
+    transition: all 0.4s ease;
+}
+
+.transparentBtn img{
+    width: 20px;
+}
+
+.spinnerHolder {
+    width: 30px;
+    height: 20px;
+}
+
+.spinner {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid;
+    border-top-color: white;
+    border-bottom-color: transparent;
+    transition: all 0.5s ease;
+    animation: spin 0.9s linear infinite;
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .fullHeight--mobile,
+    .sectionHeight--mid {
+        min-height: 60vh !important;
+    }
+
+    .mBlock {
+        display: block;
+    }
+
+    .mHide {
+        display: none !important;
+    }
+}

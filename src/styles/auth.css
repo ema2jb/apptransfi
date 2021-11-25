@@ -1,0 +1,34 @@
+.textHolder{
+    width: 75%;
+    padding: 2rem 0;
+    margin: 0 auto;
+}
+
+.logo {
+    width: 120px;
+    margin: 0 auto;
+}
+
+.imgHolder{
+    width: 580px;
+}
+
+.checkbox{
+    width: fit-content;
+    background: #C4C4C44D;
+    border-radius: 1px;
+}  
+
+.formHead hr{
+    width: 33%;
+}
+
+@media (max-width: 768px) {
+    .imgHolder{
+        width: 100%;
+    }
+
+    .textHolder{
+        width: 100%;
+    }
+}

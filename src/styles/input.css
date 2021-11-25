@@ -1,0 +1,20 @@
+.inputHolder{
+    background-color: #F8F8F8;
+    border-radius: 8px;
+    padding: .4rem;
+    border: 1px solid transparent;
+    transition: all .5s ease;
+}
+
+
+input{
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: .4rem 1rem;
+    width: 90%;
+}
+
+.inputHolder:focus-within{
+    border-color:  var(--primaryBlue);
+}
