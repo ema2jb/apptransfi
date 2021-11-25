@@ -14,9 +14,9 @@ function App() {
             <Router>
                 <Switch>
                     <Route exact path='/login' component={Login}/>
-                    <Route exact path='/' component={Signup}/>
+                    <Route exact path='/dashboard' component={Signup}/>
                     <Route exact path='/forgot' component={Forgot}/>
-                    <Route exact path='/dashboard' component={Home}/>
+                    <Route exact path='/' component={Home}/>
                 </Switch>
             </Router>
             <ToastContainer/>
