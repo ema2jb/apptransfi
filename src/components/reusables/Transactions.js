@@ -4,7 +4,7 @@ import {BsFillArrowRightSquareFill} from 'react-icons/bs'
 
 
 const Transactions = ()=>{
-    const [transactions, setTransactions] = useState([
+    const [transactions] = useState([
         {
             Activity:'Purchase',
             Amount:'$100',
