@@ -73,7 +73,7 @@ const Transactions = ()=>{
     return (
         <div className='container con'>
             <div className="row">
-                <div className=" col-11 mAuto table-responsive"> 
+                <div className=" mAuto table-responsive"> 
                 <table className="table">
                     <thead>
                         <tr>
