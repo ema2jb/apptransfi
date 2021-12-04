@@ -73,8 +73,8 @@ const Transactions = ()=>{
     return (
         <div className='container con'>
             <div className="row">
-                <div className=" mAuto table-responsive"> 
-                <table className="table">
+                <div className=""> 
+                <table className="">
                     <thead>
                         <tr>
                             <th className='vAlign' scope="col">Activity</th>
