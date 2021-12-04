@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../../styles/Transactions.css'
-import {Outlet, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 
 const Transactions = ()=>{
@@ -61,9 +61,8 @@ const Transactions = ()=>{
                 return {...transaction, background:'#E1FFEB', color:'#00BF3E'}
             } else if (transaction.Status === 'Pending'){
                 return {...transaction, background:'#FFF5DC', color:'#F3BA2F'}   
-            } else if(transaction.Status === 'Failed'){
-                return {...transaction, background:'#FEE8E8', color:'#F70000'} 
-            }
+            } 
+            return {...transaction, background:'#FEE8E8', color:'#F70000'} 
         })
 
         const navigate = useNavigate();
