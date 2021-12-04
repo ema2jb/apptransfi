@@ -97,7 +97,6 @@ const Transactions = ()=>{
                         }
                     </tbody>
                 </table>
-                <Outlet />
                 </div>
                 
             </div>
