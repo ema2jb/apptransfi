@@ -11,6 +11,7 @@ import {
     AiOutlineLogout
     } 
 from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
 
@@ -21,20 +22,24 @@ const Sidebar = () => {
             </div>
 
             <div className='mt-5'>
+                <Link to='/dashboard'>
                 <li className='mt-2 mx-3 sideBarLinks navLink'>
                     <AiOutlineBarChart />
                     <p className="sectionText--mid mx-1">DashBoard</p>
                 </li>
+                </Link>
 
                 <li className='mt-2 mx-3 sideBarLinks navLink '>
                     <AiOutlineWallet />
                     <p className="sectionText--mid mx-1">My Tokens</p>
                 </li>
 
+                <Link to='/transactions'>
                 <li className='mt-2 mx-3 sideBarLinks  navLink'>
                     <AiOutlineUserSwitch />
                     <p className="sectionText--mid mx-1">Transactions</p>
                 </li>
+                </Link>
 
                 <li className='mt-2 mx-3 sideBarLinks  navLink'>
                     <AiOutlineIssuesClose />
@@ -52,10 +57,12 @@ const Sidebar = () => {
                     <AiOutlineMessage />
                     <p className="sectionText--mid mx-1">Help</p>
                 </li>
+                <Link to='/settings'>
                 <li className='mt-2 mx-3 sideBarLinks  navLink'>
                     <AiOutlineSetting />
                     <p className="sectionText--mid mx-1">Settings</p>
                 </li>
+                </Link>
                 <li className='mt-2 mx-3 sideBarLinks  navLink'>
                     <AiOutlineLogout />
                     <p className="sectionText--mid mx-1">Log out</p>

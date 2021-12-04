@@ -1,7 +1,6 @@
 import React from 'react';
 import Sidebar from './Sidebar';
 import Nav from './Nav';
-import Transactions from './Transactions'
 
 const Layout = ({children}) => {
     return (
@@ -10,9 +9,7 @@ const Layout = ({children}) => {
             <Nav/>
             <div>
                 {children}    
-            </div>
-            
-            <Transactions />            
+            </div>              
         </div>
     )
 }

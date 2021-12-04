@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import '../../styles/Transactions.css'
-import {BsFillArrowRightSquareFill} from 'react-icons/bs'
+import {Outlet, useNavigate } from 'react-router-dom'
 
 
 const Transactions = ()=>{
@@ -9,81 +9,98 @@ const Transactions = ()=>{
             Activity:'Purchase',
             Amount:'$100',
             Status:'Confirmed',
-            Date:'21 Sep, 2020'
+            Date:'21 Sep, 2020',
+            id:1
+        },
+        {
+            Activity:'Purchase',
+            Amount:'$100',
+            Status:'Pending',
+            Date:'21 Sep, 2020',
+            id:2
+        },
+        {
+            Activity:'Purchase',
+            Amount:'$100',
+            Status:'Failed',
+            Date:'21 Sep, 2020',
+            id:3
         },
         {
             Activity:'Purchase',
             Amount:'$100',
             Status:'Confirmed',
-            Date:'21 Sep, 2020'
+            Date:'21 Sep, 2020',
+            id:4
+        },
+        {
+            Activity:'Purchase',
+            Amount:'$100',
+            Status:'Pending',
+            Date:'21 Sep, 2020',
+            id:5
+        },
+        {
+            Activity:'Purchase',
+            Amount:'$100',
+            Status:'Failed',
+            Date:'21 Sep, 2020',
+            id:6
         },
         {
             Activity:'Purchase',
             Amount:'$100',
             Status:'Confirmed',
-            Date:'21 Sep, 2020'
-        },
-        {
-            Activity:'Purchase',
-            Amount:'$100',
-            Status:'Confirmed',
-            Date:'21 Sep, 2020'
-        },
-        {
-            Activity:'Purchase',
-            Amount:'$100',
-            Status:'Confirmed',
-            Date:'21 Sep, 2020'
-        },
-        {
-            Activity:'Purchase',
-            Amount:'$100',
-            Status:'Confirmed',
-            Date:'21 Sep, 2020'
-        },
-        {
-            Activity:'Purchase',
-            Amount:'$100',
-            Status:'Confirmed',
-            Date:'21 Sep, 2020'
-        },
+            Date:'21 Sep, 2020',
+            id:7
+        }
     ])
 
+        const styledTransactions = transactions.map((transaction)=>{
+            if (transaction.Status === 'Confirmed'){
+                return {...transaction, background:'#E1FFEB', color:'#00BF3E'}
+            } else if (transaction.Status === 'Pending'){
+                return {...transaction, background:'#FFF5DC', color:'#F3BA2F'}   
+            } else if(transaction.Status === 'Failed'){
+                return {...transaction, background:'#FEE8E8', color:'#F70000'} 
+            }
+        })
+
+        const navigate = useNavigate();
+        const handleRowClick = (transaction) => {
+             navigate(`/summary/${transaction.id}`);
+        }  
 
     return (
         <div className='container con'>
-            <div className='row mb-3'>
-                <h4 className='col-11 h4'>Recent Transactions</h4>
-                <p className='col-1'>
-                <BsFillArrowRightSquareFill style={{fontSize:'2rem', background:"white", color:'#023E8A'}} />
-                </p>
-                
-            </div>
-             <div className="row">
-                <div className="table-responsive"> 
+            <div className="row">
+                <div className=" col-11 mAuto table-responsive"> 
                 <table className="table">
                     <thead>
                         <tr>
-                            <th scope="col">Activity</th>
-                            <th scope="col">Amount</th>
-                            <th scope="col">Status</th>
-                            <th scope="col">Date</th>
+                            <th className='vAlign' scope="col">Activity</th>
+                            <th className='vAlign' scope="col">Amount</th>
+                            <th className='vAlign' scope="col">Status</th>
+                            <th className='vAlign' scope="col">Date</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
-                            transactions.map(transaction=>(
-                                <tr>
-                                    <td>{transaction.Activity}</td>
-                                    <td>{transaction.Amount}</td>
-                                    <td>{transaction.Status}</td>
-                                    <td>{transaction.Date}</td>
+                            styledTransactions.map(transaction=>( 
+                                <tr className='isClickable' onClick={()=>handleRowClick(transaction)}>
+                                        <td className='vAlign'>{transaction.Activity}</td>
+                                        <td className='vAlign'>{transaction.Amount}</td>
+                                        <td className='vAlign' style = {{color:transaction.color, borderRadius:'30px', background:transaction.background}} >{transaction.Status}</td>
+                                        <td className='vAlign'>{transaction.Date}</td> 
                                 </tr>
                             ))
                         }
                     </tbody>
                 </table>
-                </div></div>
+                <Outlet />
+                </div>
+                
+            </div>
         </div>
     )
 }

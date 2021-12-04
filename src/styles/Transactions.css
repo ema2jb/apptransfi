@@ -1,8 +1,5 @@
 .con {
-    margin-top:750px;
-    position: absolute;
-    right:0px;
-    width:80%;
+    margin-top:10px;
 }
 
 /*.row i{
@@ -29,14 +26,14 @@ thead{
 td{
     font-family:'Roboto';
     font-weight:500;
-    font-size:18px;
+    font-size:15px;
     color:#0096C7;
 }
 
 th{
     font-family:'Roboto';
     font-weight:700;
-    font-size:18px;
+    font-size:15px;
     color:#023E8A;
     border-radius:8px, 8px, 0px, 0px;
     border-bottom: 0px;

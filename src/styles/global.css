@@ -27,6 +27,7 @@ li{
     min-height: 100vh;
 }
 
+
 .sectionHeight {
     min-height: 50vh;
 }
@@ -37,6 +38,10 @@ li{
 
 .sectionText {
     font-size: 18px;
+}
+
+.sectionText--midbig{
+    font-size:16px;
 }
 
 .sectionText--mid {
@@ -63,6 +68,18 @@ li{
     color: #023E8A;
 }
 
+.textIsLightBlue{
+    color: #8DA7C8;
+
+}
+.textIsYellow{
+    color: #F3BA2F;
+}
+
+.textIsRed{
+    color:#BF0000
+}
+
 .vAlign {
     text-align: center;
 }
@@ -82,6 +99,10 @@ li{
 .spaceBetween {
     display: flex;
     justify-content: space-between;
+}
+
+.displayFlex{
+    display:flex;
 }
 
 .center {
@@ -166,6 +187,21 @@ img {
 .spinnerHolder {
     width: 30px;
     height: 20px;
+}
+
+.mapBg{
+    background-image: url('./images/mapBg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center
+}
+
+.mapLight{
+    background-image: url('./images/mapLight.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+   
 }
 
 .spinner {

@@ -3,8 +3,8 @@ import '../../styles/nav.css';
 import {AiOutlineCopy}from 'react-icons/ai'
 
 const Nav = () => {
-    const [wallAdd] = useState('1jh2jhbv5kjn6')
-    const [initial] = useState('DE')
+    const [wallAdd, setWallAdd] = useState('1jh2jhbv5kjn6')
+    const [initial, setinitial] = useState('DE')
 
 
     return (
