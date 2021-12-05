@@ -74,7 +74,7 @@ const Transactions = ()=>{
         <div className='container con'>
             <div className="row">
                 <div className=""> 
-                <table className="">
+                <table className="table">
                     <thead>
                         <tr>
                             <th className='vAlign' scope="col">Activity</th>
